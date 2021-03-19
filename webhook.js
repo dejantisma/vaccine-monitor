@@ -16,6 +16,7 @@ exports.embed = (isSuccess,item) => new Discord.MessageEmbed()
         {name: 'Name',value:item.name,inline:true},
         {name: 'Street',value:item.street,inline:true},
         {name: 'City',value:item.city,inline:true},
+        {name: 'Manufacturer',value:item.slotDetails[0].manufacturer,inline:false}
 
     )
     .setTimestamp()
