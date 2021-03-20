@@ -7,7 +7,7 @@ client.login(config.botToken);
 exports.webhookClient = new Discord.WebhookClient(config.webhookID, config.webhookToken);
 exports.embed = (isSuccess,item) => new Discord.MessageEmbed()
     .setTitle(isSuccess ? "Appointment open!" : "Payment declined")
-    .setURL('https://vaccine.heb.com/scheduler')
+    .setURL(item.url)
     .setColor(isSuccess ? "GREEN" : "RED")
     .setDescription(item.name)
    // .setThumbnail(validURL(imageURL) ? imageURL : "")
